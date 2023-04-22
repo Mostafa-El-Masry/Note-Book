@@ -44,7 +44,7 @@ h2{
     transition: all 0.3s ease-in;
 }
 h4,ul,li {
-    mix-width:25vw;
+    max-width: 25vw;
     max-width: 45vw;
     padding: 1rem;
 }
@@ -108,7 +108,7 @@ li {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 0.9vw;
+    font-size: 0.8vw;
     word-spacing: 1px;
 }
 
