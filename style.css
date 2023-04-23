@@ -22,7 +22,7 @@ h2{
 
 .subsection{
     border: 1px solid #CDCDCD;
-    border-left: .2rem solid #0185F2;
+    border-left: .2rem solid #229091;
     padding: 1em;
     margin: 2rem 0;
     background-color: #E7F3FD;
@@ -34,7 +34,8 @@ h2{
     margin-left: auto;
     transition: all 0.3s ease-in;
     border-radius: 50%;
-    font-size: 1.5rem;
+    font-size: 0.7  em;
+    padding: 1.5rem 1rem 1rem;
 }
 
 .chevron-down-sharp:hover,
@@ -42,11 +43,12 @@ h2{
     color: lightskyblue;
     font-weight: bolder;
     transition: all 0.3s ease-in;
+    
 }
 h4,ul,li {
     max-width: 25vw;
     max-width: 45vw;
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
 
@@ -57,7 +59,7 @@ h4 {
     margin:1.5rem auto;
     text-align: center;
     border-radius: 0.5rem;
-    border-bottom:.2rem solid #0185F2;
+    border-bottom:.2rem solid #229091;
 }
 
 h5{
@@ -138,13 +140,59 @@ iframe {
     width: 27vw;
     height: 30.9vh;
     margin: 0.5rem;
-    border: .1vw solid #0185F2;
+    border: .1vw solid #229091;
     border-radius: 0.2vw;
 }
 
+.button{
+  --c:  #229091; /* the color*/
+  border-radius: 8px;
+  border: none;
+  box-sizing: border-box;
+  color: #229091;
+  cursor: pointer;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 3.5rem;
+  font-weight: 500;
+  height: 5rem;
+  padding: 0 .6em 0.2em;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  align-items: center;
+  box-shadow: 0 0 0 .1em inset var(--c); 
+--_g: linear-gradient(var(--c) 0 0) no-repeat;
+background: 
+    var(--_g) calc(var(--_p,0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,0%)) 0%,
+    var(--_g) calc(var(--_p,0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,0%)) 100%;
+background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+outline-offset: .1em;
+transition: background-size .4s, background-position 0s .4s;
+font-weight: bold; 
+}
 
+.button:hover {
+    color: #fff;
+    outline: 0;
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+    opacity: 0.8;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+}
 
+@media (min-width: 768px) {
+  .button {
+    min-width: 196px;
+  }
+}
 
+  .button:active {
+    box-shadow: 0 0 9e9q inset #0009; 
+    background-color: var(--c);
+    color: #fff;
+  }
 
 
 
