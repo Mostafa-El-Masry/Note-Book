@@ -92,8 +92,8 @@ li {
     position: relative;
     padding: 0.4rem 0 0.4rem .7rem;
     margin: 0.9rem 1rem;
-    background: whitesmoke;
-    font-family: 'Gloria Hallelujah', cursive;
+    background: linear-gradient(120deg, #ffffffb4, #8cc4c5a6, #228f9181);
+    font-family: 'Poppins', sans-serif;
     box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.15);
     transition: all 500ms ease-in-out;
 }
