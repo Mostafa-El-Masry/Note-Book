@@ -14,13 +14,11 @@ for (i of buttons) {
             let target = this.parentElement.nextElementSibling;
             if (target.style.display === "none") {
                 target.style.display = "";
-                target.classList.add("display");
-                console.log("condition one");
+                target.classList.add("subsection");
                 return;
             }
             else {
                 target.style.display = "none";
-                console.log("condition two");
                 return;
             }
         }

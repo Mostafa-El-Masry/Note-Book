@@ -26,7 +26,7 @@ h2 {
 
 .subsection {
     border: 1px solid #CDCDCD;
-    border-left: .2rem solid #229091;
+    border-left: .2vw solid #229091;
     padding: 1em;
     margin: 2rem 0;
     background-color: #E7F3FD;
@@ -57,9 +57,9 @@ h2 {
 h4,
 ul,
 li {
-    max-width: 25vw;
+    min-width: 40vw;
     max-width: 45vw;
-    padding: 0 1rem;
+    padding: 0.3vh 1rem;
 }
 
 
@@ -94,9 +94,9 @@ ul {
 li {
     list-style: none;
     position: relative;
-    padding: 0.4rem 0 0.4rem .7rem;
+    border-left: .2vw solid #229091;
     margin: 0.9rem 1rem;
-    background: linear-gradient(120deg, #ffffffb4, #8cc4c569, #228f9142);
+    background: linear-gradient(120deg, #228f9142, #98c3c469, #228f9142);
     font-family: 'Poppins', sans-serif;
     box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.15);
     transition: all 500ms linear;
@@ -105,9 +105,9 @@ li {
 
 
 li:hover {
-    transform: scale(1.1);
-    border: 0.1vh solid #228f91 ;
-    border-width: 0.1vw;
+    transform: scale(1.08);
+    border-left: 0.4vh solid #0f6b6d ;
+    border-radius: 5px;
     background: #fff;
 }
 
@@ -141,7 +141,7 @@ li:nth-child(3n - 1)::marker {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 0.8vw;
+    font-size: 1vw;
     word-spacing: 1px;
 }
 
@@ -150,6 +150,9 @@ li:nth-child(3n - 1)::marker {
     background-color: rgb(240, 240, 240);
 }
 
+.bg-month {
+     background-color: #229091;
+}
 .divy {
     background-color: #909940;
     width: 100px;
