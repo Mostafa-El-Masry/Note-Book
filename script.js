@@ -14,19 +14,23 @@ const plist = document.querySelector(".p-list");
 submit.addEventListener('click', function (event) {
     event.preventDefault();
     if (input.value !== ""){
+    const pul = document.createElement("ul");
     const pdiv = document.createElement("div");
-    pdiv.classList.add("Password");
-    const pli1 = document.createElement("li");
-    pli1.innerText = input.value;
-    const pli2 = document.createElement("i")
-    pli2.classList.add("fa-solid", "fa-check");
-    pli1.appendChild(pli2);
-    pdiv.appendChild(pli1);
+    pdiv.classList.add("Password", "d-flex");
+    const pli = document.createElement("li");
+    pli.classList.add("p-li");
+    pli.innerText = input.value;
+    const button = document.createElement("button");
+    button.innerHTML = '<i class="fa-solid fa-ballot-check"></i>';
+    const button2 = document.createElement("button");
+    button2.innerHTML = '<i class="fa-solid fa-broom-wide"></i>';
+    pdiv.appendChild(pli);
+    pdiv.appendChild(button);
+    pdiv.appendChild(button2);
     plist.appendChild(pdiv);
     input.value = "";
 }
 });
-
 
 
 

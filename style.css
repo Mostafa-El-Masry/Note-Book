@@ -102,6 +102,7 @@ li {
     box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.15);
     transition: all 500ms linear;
     border: solid 0.5px #fff;
+    width: 100%;
 }
 
 
@@ -149,9 +150,6 @@ li:nth-child(3n - 1)::marker {
     word-spacing: 1px;
 }
 
-.d-flex {
-    display: flex;
-}
 
 .week:hover {
     box-shadow: 0.25rem 0.25rem 0.75rem rgba(0, 0, 0, 0.37);
@@ -175,6 +173,19 @@ li:nth-child(3n - 1)::marker {
     height: 100px;
     display: block;
 }
+.password{
+    min-width:40vw;
+    margin: 0.5rem;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.p-li {
+    flex:1;
+}
+
+
 
 
 iframe {
