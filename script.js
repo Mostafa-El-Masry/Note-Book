@@ -5,7 +5,7 @@ const weeks = document.querySelectorAll(".week");
 const months = document.querySelectorAll(".month");
 const submit = document.querySelector("#button-addon2");
 const input = document.querySelector(".form-control");
-const plist = document.querySelector(".p-list");
+
 // //Event Listener
 // for (subsection of subsections) {
 //     subsection.style.display = "none";
@@ -13,21 +13,30 @@ const plist = document.querySelector(".p-list");
 
 submit.addEventListener('click', function (event) {
     event.preventDefault();
+    // gabing ul 
+    const plist = document.querySelector(".p-list");
+    
     if (input.value !== ""){
-    const pul = document.createElement("ul");
+    //creating div and appending it to ul
     const pdiv = document.createElement("div");
-    pdiv.classList.add("Password", "d-flex");
+    plist.appendChild(pdiv);
+    //adding class to it
+    pdiv.classList.add("Password");
+    // creating li and appending it to div
     const pli = document.createElement("li");
     pli.classList.add("p-li");
-    pli.innerText = input.value;
-    const button = document.createElement("button");
-    button.innerHTML = '<i class="fa-solid fa-ballot-check"></i>';
-    const button2 = document.createElement("button");
-    button2.innerHTML = '<i class="fa-solid fa-broom-wide"></i>';
     pdiv.appendChild(pli);
-    pdiv.appendChild(button);
-    pdiv.appendChild(button2);
-    plist.appendChild(pdiv);
+    pli.innerText = input.value;
+    // creating a button and apending it to div 
+    const completeBut = document.createElement("complete-But");
+    completeBut.innerHTML = '<i class="fa-solid fa-list"></i>';
+    pdiv.appendChild(completeBut);
+    // creating a button and apending it to div 
+    const deleteBut = document.createElement("delete-But");
+    deleteBut.innerHTML = '<i class="fa-solid fa-square-minus"></i>';
+    pdiv.appendChild(deleteBut);
+
+    // clearing input value
     input.value = "";
 }
 });
