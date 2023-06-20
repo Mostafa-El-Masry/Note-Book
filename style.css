@@ -173,18 +173,34 @@ li:nth-child(3n - 1)::marker {
     height: 100px;
     display: block;
 }
-.password{
-    min-width:40vw;
+
+
+.p-list {
+    /* display: flex; */
+}
+
+.Password {
     margin: 0.5rem;
     font-size: 1.1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.p-li {
-    flex:1;
+
 }
 
+.p-li {
+    flex: 1;
+
+}
+
+.complete-But,
+.delete-But {
+    padding: 0.2rem;
+    margin: 0.2rem;
+    border: none;
+    color: #229091;
+    font-size: 1.5rem;
+}
 
 
 

@@ -28,11 +28,13 @@ submit.addEventListener('click', function (event) {
     pdiv.appendChild(pli);
     pli.innerText = input.value;
     // creating a button and apending it to div 
-    const completeBut = document.createElement("complete-But");
+    const completeBut = document.createElement("button");
+    completeBut.classList.add("complete-But");
     completeBut.innerHTML = '<i class="fa-solid fa-list"></i>';
     pdiv.appendChild(completeBut);
     // creating a button and apending it to div 
-    const deleteBut = document.createElement("delete-But");
+    const deleteBut = document.createElement("button");
+    deleteBut.classList.add("complete-But");
     deleteBut.innerHTML = '<i class="fa-solid fa-square-minus"></i>';
     pdiv.appendChild(deleteBut);
 
