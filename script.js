@@ -27,21 +27,24 @@ submit.addEventListener('click', function (event) {
     pli.classList.add("p-li");
     pdiv.appendChild(pli);
     pli.innerText = input.value;
-    // creating a button and apending it to div 
-    const completeBut = document.createElement("button");
-    completeBut.classList.add("complete-But");
-    completeBut.innerHTML = '<i class="fa-solid fa-list"></i>';
-    pdiv.appendChild(completeBut);
+   
     // creating a button and apending it to div 
     const deleteBut = document.createElement("button");
-    deleteBut.classList.add("complete-But");
+    deleteBut.classList.add("delete-But");
     deleteBut.innerHTML = '<i class="fa-solid fa-square-minus"></i>';
     pdiv.appendChild(deleteBut);
+
+    deleteBut.addEventListener('click', function (){
+        plist.removeChild(pdiv);
+    });
 
     // clearing input value
     input.value = "";
 }
 });
+
+
+
 
 
 
