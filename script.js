@@ -12,6 +12,8 @@ const plist = document.querySelector(".p-list");
 //     subsection.style.display = "none";
 // }
 document.addEventListener("DOMContentLoaded", getpasswords);
+
+
 submit.addEventListener('click', function (event) {
     event.preventDefault();
 
@@ -30,25 +32,24 @@ submit.addEventListener('click', function (event) {
     //Save to local - do this last
     //Save to local
     saveLocalpasswords(input.value);
+    console.log(input.value);
     // creating a button and apending it to div 
     const deleteBut = document.createElement("button");
     deleteBut.classList.add("delete-But");
     deleteBut.innerHTML = '<i class="fa-solid fa-square-minus"></i>';
     pdiv.appendChild(deleteBut);
-
-    deleteBut.addEventListener('click', function deleteButton (e){
-        e.stopPropagation();
-        const item = e.target.parentElement;
-        if (item.classList[0] === "delete-But") {
-        item.classList.add("fall");
-        removeLocalpasswords(password);
-        item.addEventListener('transitionend', function () {
-            item.remove();
-        })
-      }
+    
+    deleteBut.addEventListener('click', function deleteBut (e){
+      e.stopPropagation();
+      const item = e.target;
+      const password = item.parentElement 
+      password.classList.add("fall");
+      removeLocalpasswords(password);
+      password.addEventListener('transitionend', function(){  
+        password.remove();
+      })
     });
 
-    // clearing input value
     input.value = "";
 }
 });
@@ -95,18 +96,20 @@ for (x of months) {
 
 //local storage
 // ADDING A PASSWORD TO LOCAL STORAGE
-function saveLocalpasswords(password) {
+  function saveLocalpasswords(password) {
     let passwords;
-    if (localStorage.getItem("passwords") === null) {
-      passwords = [];
-    } else {
-      passwords = JSON.parse(localStorage.getItem("passwords"));
+      if (localStorage.getItem("passwords") === null) {
+        passwords= [];
+      } else {
+        passwords = JSON.parse(localStorage.getItem("passwords"));
+      }
+      passwords.push(password);
+      localStorage.setItem("passwords", JSON.stringify(passwords));
+      console.log("password Added");
     }
-    passwords.push(password);
-    localStorage.setItem("passwords", JSON.stringify(passwords));
-  }
 
-// REMOVING A PASSWORD FROM LOCAL STORAGE
+// // REMOVING A PASSWORD FROM LOCAL STORAGE
+
   function removeLocalpasswords(password) {
     let passwords;
     if (localStorage.getItem("passwords") === null) {
@@ -114,12 +117,10 @@ function saveLocalpasswords(password) {
     } else {
       passwords = JSON.parse(localStorage.getItem("passwords"));
     }
-    console.log(password);
     const passwordIndex = password.children[0].innerText;
     passwords.splice(passwords.indexOf(passwordIndex), 1);
     localStorage.setItem("passwords", JSON.stringify(passwords));
   }
-  
 
   // geting back LOCAL STORAGE passwords
   function getpasswords() {
@@ -150,5 +151,16 @@ function saveLocalpasswords(password) {
         deleteBut.classList.add("delete-But");
         deleteBut.innerHTML = '<i class="fa-solid fa-square-minus"></i>';
         pdiv.appendChild(deleteBut);
+
+        deleteBut.addEventListener('click', function deleteBut (e){
+          e.stopPropagation();
+          const item = e.target;
+          const password = item.parentElement;
+          password.classList.add("fall");
+          removeLocalpasswords(password);
+          password.addEventListener('transitionend', function () {
+            password.remove();              
+          })
+      });
     });
-  };
+  } ;
