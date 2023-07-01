@@ -6,11 +6,14 @@ const months = document.querySelectorAll(".month");
 const submit = document.querySelector("#button-addon2");
 const input = document.querySelector(".form-control");
 const plist = document.querySelector(".p-list");
+const monthlySaving = document.querySelector('.Saving');
+const monthlyExpenses = document.querySelector('.Expenses');
+//Event Listener
+for (subsection of subsections) {
+    subsection.style.display = "none";
+}
 
-// //Event Listener
-// for (subsection of subsections) {
-//     subsection.style.display = "none";
-// }
+
 document.addEventListener("DOMContentLoaded", getpasswords);
 
 
@@ -32,7 +35,6 @@ submit.addEventListener('click', function (event) {
     //Save to local - do this last
     //Save to local
     saveLocalpasswords(input.value);
-    console.log(input.value);
     // creating a button and apending it to div 
     const deleteBut = document.createElement("button");
     deleteBut.classList.add("delete-But");
@@ -93,9 +95,13 @@ for (x of months) {
 }
 // Functions 
 
-
-//local storage
-// ADDING A PASSWORD TO LOCAL STORAGE
+function savingNexpenses () {
+  monthlySaving.innerText =   (350 * 0.6);
+  monthlyExpenses.innerText = (350 * 0.4);
+ };
+ savingNexpenses();
+// //local storage
+// // ADDING A PASSWORD TO LOCAL STORAGE
   function saveLocalpasswords(password) {
     let passwords;
       if (localStorage.getItem("passwords") === null) {
@@ -105,7 +111,6 @@ for (x of months) {
       }
       passwords.push(password);
       localStorage.setItem("passwords", JSON.stringify(passwords));
-      console.log("password Added");
     }
 
 // // REMOVING A PASSWORD FROM LOCAL STORAGE
@@ -163,4 +168,4 @@ for (x of months) {
           })
       });
     });
-  } ;
+  };
