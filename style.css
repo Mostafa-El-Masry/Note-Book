@@ -8,13 +8,55 @@ body {
     max-width: 60vw;
     margin: 0 auto;
     font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background: url(https://images.unsplash.com/photo-1576872381149-7847515ce5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
 }
 
+
+
 #hero {
+    display: flex;
     font-size: 6em;
-    color: #909940;
-    text-align: center;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
 }
+#carouselExample{
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+}
+.carousel-inner{
+    background: rgba(66, 28, 138, 0.233);
+    margin: 20vh 0;
+    background: rgba(21, 18, 18, 0.137);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border:0.3px solid rgb(255, 255, 255);
+}
+.carousel-item {
+    margin: 22vh 0;
+ 
+    
+}
+
+.carousel-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+/* From https://css.glass */
+
 
 .section {
     margin: 1rem 0;
@@ -29,7 +71,7 @@ h2 {
     border-left: .2vw solid #229091;
     padding: 1em;
     margin: 2rem 0;
-    background-color: #E7F3FD;
+    background-color: #e7f3fd2f;
     border-radius: 0.3rem;
     display: flex;
     flex-wrap: wrap;
@@ -103,6 +145,7 @@ li {
     transition: all 500ms linear;
     border: solid 0.5px #fff;
     width: 100%;
+    color: #fff;
 }
 
 
