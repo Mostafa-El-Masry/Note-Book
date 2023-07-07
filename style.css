@@ -17,19 +17,23 @@ body {
 }
 
 
-
 #hero {
     display: flex;
     font-size: 6em;
     color: #ffffff;
     justify-content: center;
     align-items: center;
+    
 }
-#carouselExample{
+#carouselExample-header{
     background: rgba(255, 255, 255, 0.1);
     border-radius: 16px;
+    cursor: pointer;
+    font-family: 'Caprasimo', cursive;
+    letter-spacing: 4px;
+    word-spacing: 20px;
 }
-.carousel-inner{
+.carousel-inner-header{
     background: rgba(66, 28, 138, 0.233);
     margin: 20vh 0;
     background: rgba(21, 18, 18, 0.137);
@@ -39,13 +43,11 @@ body {
     -webkit-backdrop-filter: blur(5.1px);
     border:0.3px solid rgb(255, 255, 255);
 }
-.carousel-item {
+.carousel-item-header {
     margin: 22vh 0;
- 
-    
 }
 
-.carousel-item:before {
+.carousel-item-header:before {
     content: '';
     position: absolute;
     top: 0;
@@ -53,9 +55,6 @@ body {
     right: 0;
     bottom: 0;
 }
-
-
-/* From https://css.glass */
 
 
 .section {
