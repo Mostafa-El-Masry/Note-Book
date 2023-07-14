@@ -173,3 +173,30 @@ function savingNexpenses () {
  
 
 
+  $(function() {
+    $(".carousel").on("slide.bs.carousel", function(e) {
+      var prev = $(this)
+        .find(".active")
+        .index();
+      var next = $(e.relatedTarget).index();
+      var video = $("#video-player")[0];
+      var videoSlide = $("#video-player")
+        .closest(".carousel-item")
+        .index();
+      if (next === videoSlide) {
+        if (video.tagName == "IFRAME") {
+          player.playVideo();
+        } else {
+          createVideo(video);
+        }
+      } else {
+        if (typeof player !== "undefined") {
+          player.pauseVideo();
+        }
+      }
+    });
+  });
+  
+$(document).ready(function(){
+  $('.carousel').carousel();
+});
