@@ -13,7 +13,7 @@
 
 :root {
     --primary: #229091 ;
-    --secondary: #261E5A;
+    --secondary: #094b4d;
 
 }
 
@@ -42,6 +42,7 @@ body {
     background-color: #000;
     opacity: 0.3;
 }
+
 
 #hero {
     display: flex;
@@ -313,7 +314,10 @@ li:nth-child(3n - 1)::marker {
     font-size: 1.5rem;
 }
 
-
+#subsectionp {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 
@@ -387,6 +391,8 @@ li:nth-child(3n - 1)::marker {
 }
  
 .articles article {
+    resize: both;
+    overflow: hidden;
     max-width: 40rem;
     cursor: pointer;
     position: relative;
@@ -423,7 +429,7 @@ li:nth-child(3n - 1)::marker {
     max-width: 100%;
     transform-origin: center;
     transition: transform 0.4s ease-in-out;
-    filter: blur(0.1rem);
+    filter: grayscale(50%);
 }
 .article-preview {
     padding: 24px;
@@ -461,5 +467,98 @@ li:nth-child(3n - 1)::marker {
 }
 
 .articles article:hover {
-    transform: scale(1.8); 
+    transform: scale(1.5); 
 }
+
+/************* CALENDER SECTION *********************/ 
+.style {
+    font-size: 1.5rem;
+    padding: .2rem 0;
+    text-align: center;
+    min-width: 25vw;
+}
+
+.style:hover {
+    color:#fff;
+    background-color: var(--secondary);
+}
+#weekContainer {
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+#goalContainer{
+    min-width: 25vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#weekContainer::-webkit-scrollbar {
+    width: 0.2em;
+  }
+   
+  #weekContainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  #weekContainer::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    outline: 1px solid slategrey;
+  }
+
+#goalText {
+    width: 100%;
+    height: 35vh;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    display: flex;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  /* .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  } */
+
+  .weekcollapsible {
+    background-color: var(--secondary);
+    color: white;
+    cursor: pointer;
+    padding: 0.6rem 0;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    font-size: 1.2rem;
+  }
+
+  #saveGoal{
+    background-color: var(--secondary);
+    color: white;
+    cursor: pointer;
+    padding: 0.6rem 0;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    font-size: 1.2rem;
+  }
+
+  .saved {
+    background-color: var(--secondary);
+    color: #fff;
+    width: 10rem;
+    height: 5rem;
+    margin: 2rem auto;
+  }
