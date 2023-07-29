@@ -55,8 +55,7 @@ function createCalendar() {
     };
     calendar.appendChild(weekDiv);
     weekDiv.classList.add("style");
-    saved.innerText = "Goal saved!";
-    saved.innerHTML = "Goal saved!";
+
     startDate.setDate(startDate.getDate() + 7);
   }
 }
@@ -76,7 +75,8 @@ for (let i = 0; i < collapsibles.length; i++) {
 saveGoal.addEventListener("click", function () {
   if (selectedWeek) {
     localStorage.setItem(selectedWeek, goalText.value);
-    alert("Goal saved!");
+    saved.innerText = "Goal saved!";
+    saved.innerHTML = "Goal saved!";
   }
 });
 
