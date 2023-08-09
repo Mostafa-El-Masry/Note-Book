@@ -4,13 +4,6 @@
     margin: 0;
 }
 
-.container {
-    padding:13vh 0;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
 :root {
     --primary: #229091 ;
     --secondary: #094b4d;
@@ -18,83 +11,51 @@
 }
 
 body {
-    background-color: var(--secondary);
-}
-
-body {
-    max-width: 60vw;
-    margin: 0 auto;
     font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    background: url(https://plus.unsplash.com/premium_photo-1674675647033-454dc0df1e92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80 );
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+}
+
+/************* Opening SECTION *********************/ 
+.indexbody {
+    background-color: #094b4d;
     height: 100vh;
+    overflow: hidden;
+  }
 
-}
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: 0.3;
-}
+.brand-item {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
 
-/************* CAROUSEL SECTION *********************/ 
-
-#hero {
+  .content {
+    height: 100vh;
     display: flex;
-    font-size: 4.5em;
-    color: #ffffff;
     justify-content: center;
     align-items: center;
-    
-}
 
-#carouselExample-header{
-    background: rgba(00, 00, 00, 0.1);
-    box-shadow: 0.2rem 0.2rem 0.6rem 0.1rem rgba(0, 0, 0, 0.5);
-    border-radius: 16px;
-    cursor: pointer;
-    font-family: 'Cabin', sans-serif;
-    font-size: lighter;
-    letter-spacing: 4px;
-    word-spacing: 20px;
-    max-width: 45vw;
-    margin: 0 auto;
-}
+  }
 
-.carousel-inner-header{
-    margin: 3vh 0;
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1.5px);
-    -webkit-backdrop-filter: blur(1.5px);
-    border:0.3px solid rgb(255, 255, 255);
-}
+  .content h1 {
+    color: white;
+    text-align: center;
 
-.carousel-item-header {
-    margin: 18vh 0;
-}
+  }
 
-.carousel-item-header:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
 
-/************* END OF CAROUSEL SECTION *********************/ 
+/************* END OF Opening SECTION *********************/ 
+
+.wallbody {
+    background-color: #094b4d;
+  }
 
 .section {
     margin: 1rem 0;
 }
 
+.section:first-child {
+    margin-top: 13vh;
+}
 .subsection.collapse {
     display: none;
   }
@@ -197,26 +158,7 @@ li:hover {
     background: #fff;
 }
 
-.links{
-    margin:2rem 0;  
-}
-.links a {
-    position: relative;
-    background-color: var(--primary);
-    box-shadow: 0 5px 0 var(--primary);
-    color: white;
-    padding: 1em 1.5em;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  
-  a:hover {
-    background-color: #ce0606;
-  }
-  
-  a:active {
-    box-shadow: none;
-  }
+
   
 
 .fa-square-minus{
